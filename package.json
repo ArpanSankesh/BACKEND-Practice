@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Welcome to my Backend Practice Repository! This repository is dedicated to practicing and honing my backend development skills.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Sankesh",
+  "license": "ISC"
+}
