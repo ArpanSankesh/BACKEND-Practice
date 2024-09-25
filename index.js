@@ -1,4 +1,11 @@
-var oneLinerJoke = require('one-liner-joke');
+const express = require('express');
+const app = express()
 
-var getRandomJoke = oneLinerJoke.getRandomJoke();
-console.log(getRandomJoke)
+app.get('/', function (req, res){
+    res.send('Hi World');
+})
+app.get('/home', function (req, res){
+    res.send('Haa bhai tu sahi hai!');
+})
+
+app.listen(3000)

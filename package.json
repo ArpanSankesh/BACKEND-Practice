@@ -9,6 +9,7 @@
   "author": "Max Sankesh",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.21.0",
     "one-liner-joke": "^1.2.2"
   }
 }
