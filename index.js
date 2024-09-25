@@ -1,11 +1,22 @@
 const express = require('express');
-const app = express()
+const app = express();
+
+app.use(function(req, res, next){
+    console.log("middelWare chalaa do bro");
+    next();
+})
 
 app.get('/', function (req, res){
-    res.send('Hi World');
+    res.send('Yes bro challl raha hai Nodemon');
 })
-app.get('/home', function (req, res){
-    res.send('Haa bhai tu sahi hai!');
+app.get('/home', function (req, res, next){
+    return next (new Error("Something Went Worng"));
+})
+
+app.use((err, req, res, next) => {
+console.log(err.stack);
+res.status(500).send('Something Went Worng');
+
 })
 
 app.listen(1000)
