@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDb</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="w-full h-full bg-zinc-900 p-10 text-slate-200 flex items-center justify-center">
+        <div class="nav absolute top-4 left-4">
+            <a href="/read" class="text-blue-600">View users</a>
+        </div>
+        <form class="flex items-center justify-center flex-col" action="/update/<%= users._id%>" method="post">
+            <h1 class="text-white mb-5 text-2xl border-b-4 border-zinc-700">UPDATE USER</h1>
+            
+            <input type="text" placeholder="name..."  value="<%= users.name%>" name="name" class="px-5 py-2 bg-transparent rounded-md border-2 outline-none border-zinc-700 ">
+            <input type="text" placeholder="email" value="<%= users.email%>" name="email" class="px-5 py-2 bg-transparent rounded-md border-2 outline-none border-zinc-700 mt-5">
+            <input type="text" placeholder="image url..." name="image" class="px-5 py-2 bg-transparent rounded-md border-2 outline-none border-zinc-700 mt-5">
+            <input type="submit" value="Update..." class=" cursor-pointer bg-blue-700 rounded-md px-20 py-2 mt-5">
+        </form>
+    </div>
+</body>
+</html>

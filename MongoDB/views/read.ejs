@@ -24,7 +24,7 @@
                         <h3 class="tracking-tighter text-xl mt-3"><%= user.name %></h3>
                         <h5 class="tracking-tighter text-zinc-500"><%= user.email %></h5>
                         <div class="flex item-center justify-between mt-10">
-                            <a href="/edit"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a href="/edit/<%= user._id%>"><i class="fa-regular fa-pen-to-square"></i></a>
                             <a href="/delete/<%= user._id%>"><i class="fa-solid fa-trash"></i></a>
                         </div>
                     </div>
