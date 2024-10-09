@@ -7,12 +7,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="w-full h-screen bg-zinc-900 flex items-center justify-center">
-        <form action="/create" method="post">
-            <input class="block w-full rounded-lg text-slate-100 px-5 py-2 bg-zinc-800" type="text" placeholder="Title..." name="title">
-            <textarea class="block w-full rounded-lg text-slate-100 px-5 py-2 resize-none mt-2 bg-zinc-800" placeholder="YOUR TASKS..." name="notes"></textarea>
-            <input class=" text-white mt-2 bg-blue-600 font-medium px-10 py-2 rounded-lg" type="submit" value="Create">
+    <div class="w-full h-screen bg-zinc-900 flex items-center justify-center text-white">
+        <a href="/login" class="absolute top-10 left-10 cursor-pointer text-blue-600">Login</a>
+        <form class="flex items-center justify-center flex-col" action="/create" method="post">
+            <h1 class="text-white mb-5 text-2xl border-b-4 border-zinc-700">CREATE USER</h1>
+            
+            <input type="text" placeholder="name..." name="username" class="px-5 py-2 bg-transparent rounded-md border-2 outline-none border-zinc-700 ">
+            <input type="text" placeholder="email..." name="email" class="px-5 py-2 bg-transparent rounded-md border-2 outline-none border-zinc-700 mt-5">
+            <input type="password" placeholder="password..." name="password" class="px-5 py-2 bg-transparent rounded-md border-2 outline-none border-zinc-700 mt-5 ">
+            <input type="number" placeholder="age.." name="age" class="px-5 py-2 bg-transparent rounded-md border-2 outline-none border-zinc-700 mt-5">
+            <input type="submit" value="Create..." class=" cursor-pointer bg-blue-700 rounded-md px-20 py-2 mt-5">
         </form>
+        
     </div>
 </body>
 </html>
