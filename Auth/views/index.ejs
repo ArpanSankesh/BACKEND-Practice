@@ -7,8 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="w-ful h-screen bg-zinc-900">
-        
+    <div class="w-full h-screen bg-zinc-900 flex items-center justify-center">
+        <form action="/create" method="post">
+            <input class="block w-full rounded-lg text-slate-100 px-5 py-2 bg-zinc-800" type="text" placeholder="Title..." name="title">
+            <textarea class="block w-full rounded-lg text-slate-100 px-5 py-2 resize-none mt-2 bg-zinc-800" placeholder="YOUR TASKS..." name="notes"></textarea>
+            <input class=" text-white mt-2 bg-blue-600 font-medium px-10 py-2 rounded-lg" type="submit" value="Create">
+        </form>
     </div>
 </body>
 </html>
