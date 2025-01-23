@@ -21,4 +21,10 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
+app.get('/get-from-data', (req, res) => {
+    console.log(req.query);
+    res.send("DATA RECEIVED")
+    
+})
+
 app.listen(3000);
