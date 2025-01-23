@@ -1,30 +1,30 @@
-const express = require('express');
-const app = express(); 
+const express = require("express");
+const app = express();
 
-const morgan = require('morgan')
+const morgan = require("morgan");
+app.use(morgan("dev"));
 
-app.use(morgan('dev'))
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
+app.use(express.static("public"))
 
-
-app.set('view engine', 'ejs')
-
+app.set("view engine", "ejs");
 
 app.use((req, res, next) => {
-    const a = 10; 
-    const b = 20;
-    console.log(a+b);
+  const a = 10;
+  const b = 20;
+  console.log(a + b);
 
-    return next();
-})
+  return next();
+});
 
-app.get('/', (req, res) => {
-    res.render('index')
-})
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
-app.get('/get-from-data', (req, res) => {
-    console.log(req.query);
-    res.send("DATA RECEIVED")
-    
-})
+app.post("/get-form-data", (req, res) => {
+  console.log(req.body);
+  res.send("DATA RECEIVED");
+});
 
 app.listen(3000);

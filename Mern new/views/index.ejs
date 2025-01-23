@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hmm</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form action="/get-form-data">
+    <form action="/get-form-data" method="post">
         <input 
         type="text"
-        placeholder="ENTER USERNAME">
+        placeholder="ENTER USERNAME"
+        name="USERNAME">
 
         <input 
         type="text"
-        placeholder="ENTER EMAIL">
+        placeholder="ENTER EMAIL"
+        name="EMAIL">
 
-        <input type="password" name="" id="">
+        <input type="password" name="PASSWORD">
 
         <button>Submit</button>
-    </form>
+    </form> 
+    <script src="index.js"></script>
 </body>
 </html>
